@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Weather</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="top">
+        <h1 id="topicName">Weather App</h1>
+    </div>
+
+    <div class="main">
+
+        <form>
+
+            <label for="searchLabel">Enter City Name or Postal Code</label>
+            
+            <div class="mainSearch">
+                <input type="text" name="searchValue" id="searchValue" placeholder="Enter City Name or Postal Code">
+                <select name="searchOption" id="searchOption">
+                    <option value="city">City Name</option>
+                    <option value="postal">Postal Code</option>
+                </select><br>
+                <input type="submit" value="Search" id="submit">
+
+                <h6 id="error"></h6>
+            </div>
+
+        </form>
+
+        <div class="onRight">
+            <h1 id="tempId"></h1>
+            <h3 id="weatherId"></h3>
+            <h2 id="locationId"></h2>
+            <h2 id="countryId"></h2>
+            <button id="toggleBtn" dvalue="true"></button>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
+
+<!-- 
+<script>
+    document.getElementById('fetchData').addEventListener('click', function () {
+        const data = null;
+        const city = document.getElementById('cityInput').value;
+        const postcode = document.getElementById('postcodeInput').value;
+
+        const xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        
+        xhr.addEventListener('readystatechange', function () {
+            if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+            }
+            else{
+                console.error("Error: ", this.status, this.statusText);
+            }
+        });
+        
+        const apiUrl = `https://weatherapi-com.p.rapidapi.com/current.json?q=${encodeURIComponent(city)}||postal_code=${encodeURIComponent(postcode)}`;
+
+        xhr.open('GET', apiUrl);
+        xhr.setRequestHeader('X-RapidAPI-Key', '80cfae39b6mshfa540cf25d072dfp1588e3jsn1a7704585496');
+        xhr.setRequestHeader('X-RapidAPI-Host', 'weatherapi-com.p.rapidapi.com');
+        
+        xhr.send(data);
+
+    });
+</script> -->
